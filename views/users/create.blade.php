@@ -39,5 +39,4 @@
 	</div>
 {{ Form::close() }}
 
-
 @stop
