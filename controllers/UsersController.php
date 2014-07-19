@@ -73,8 +73,10 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-     	// return View::find(1);
-     
+		// Get user from database user id variable
+   	$user = User::find($id);
+   	// Load users show page with user object
+    return View::make('users.show', compact('user'));
 	}
 
 
