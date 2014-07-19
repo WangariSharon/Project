@@ -9,7 +9,10 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('users.index');
+		// Get all users from database
+		$users = User::all();
+		// Load View to list all users
+		return View::make('users.index', compact('users'));
 	}
 
 
